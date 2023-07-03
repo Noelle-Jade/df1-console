@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery.terminal/js/jquery.terminal.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.terminal/css/jquery.terminal.min.css"/>
+    </head>
+    <body>
+        <script>
+            $('body').terminal({
+                print: function(what) {
+                    if (what == 'active-df1') {
+                        this.echo('\n   Active Dualfighters:\n    Foundation:\n     Kristopher (Kris) Æternal\n');
+                    }
+                }
+            },
+            {
+                greetings: 'Dualfighter Terminal [Version 10.0.22621.1702]\n(c) The Dualfighter Foundation. All rights reserved.\n\nLogged in as Noelle Jade (1N1-1)'
+            });
+            </script>
+        </body>
+</html>
