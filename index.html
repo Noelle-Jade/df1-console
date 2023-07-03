@@ -8,12 +8,15 @@
         <title>DF1 Console</title>
     	<meta name="theme-color" content="#8100ff">
     	<meta property="og:title" content="DualFighter Terminal">
-    	<meta property="og:description" content="The official terminal of Noelle Jade.\nUse at own risk.\nAll rights reserved.(1N1-1)">
+    	<meta property="og:description" content="The official terminal of Noelle Jade. Use at own risk. All rights reserved.(1N1-1)">
     	<meta property="og:image" content="icon.png">
     </head>
     <body>
         <script>
             $('body').terminal({
+                cat: function() {
+                    this.echo($('<img src="https://console.df1.dev/icon.png>'));
+                },
                 help: function() {
                     this.echo('\n   Help:\n   command (command), Gives help on a specific command\n   print, Prints a pre-defined string to the screen\n');
                 },
