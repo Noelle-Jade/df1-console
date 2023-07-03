@@ -4,13 +4,25 @@
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/jquery.terminal/js/jquery.terminal.min.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.terminal/css/jquery.terminal.min.css"/>
+        <title>DF1 Console</title>
     </head>
     <body>
         <script>
             $('body').terminal({
+                help: function() {
+                    this.echo('\n   Help:\n   command (command), Gives help on a specific command\n   print, Prints a pre-defined string to the screen\n');
+                },
+                command: function(what) {
+                    if (what == 'print') {
+                        this.echo('\n   Command Help: print\n   Prints a pre-defined string to the screen\n   List of possible strings:\n    active-df1, Prints a list of active DualFighters');
+                    }
+                },
                 print: function(what) {
                     if (what == 'active-df1') {
-                        this.echo('\n   Active Dualfighters:\n    Foundation:\n     Kristopher (Kris) Æternal\n');
+                        this.echo('\n   Active Dualfighters:\n    Unafiliated:\n     Noelle Jade (1N1-1)\n    Foundation:\n     Kristopher (Kris) Æternal (1N1-1)\n');
+                    }
+                    else {
+                        this.echo('\n   That argument was invalid.\n');
                     }
                 }
             },
